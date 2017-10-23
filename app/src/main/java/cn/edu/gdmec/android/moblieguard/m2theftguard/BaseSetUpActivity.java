@@ -1,12 +1,14 @@
 package cn.edu.gdmec.android.moblieguard.m2theftguard;
 
+
+
+
 import android.content.Intent;
 import android.content.SharedPreferences;
-import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.GestureDetector;
 import android.view.MotionEvent;
-import android.view.ScaleGestureDetector;
 import android.view.Window;
 import android.widget.Toast;
 
@@ -26,6 +28,7 @@ public abstract class BaseSetUpActivity extends AppCompatActivity {
         return super.onTouchEvent(event);
 
     }
+
     public void startActivityAndFinishSelf(Class<?> cls){
         Intent intent = new Intent(this,cls);
         startActivity(intent);

@@ -78,10 +78,10 @@ public class HomeActivity extends AppCompatActivity {
                                 setUpPasswordDialog.dismiss();
                                 showInterPswdDialog();
                             }else {
-                                Toast.makeText(HomeActivity.this, "两次密码不一致!", Toast.LENGTH_SHORT).show();
+                                Toast.makeText(HomeActivity.this, "两次密码不一致!", Toast.LENGTH_LONG).show();
                             }
                         }else{
-                            Toast.makeText(HomeActivity.this, "密码不能为空", Toast.LENGTH_SHORT).show();
+                            Toast.makeText(HomeActivity.this, "密码不能为空", Toast.LENGTH_LONG).show();
                         }
                     }
                     public void cancel(){
@@ -98,14 +98,14 @@ public class HomeActivity extends AppCompatActivity {
         mInPswdDialog.setCallBack(new InterPasswordDialog.MyCallBack(){
             public void confirm(){
                 if (TextUtils.isEmpty(mInPswdDialog.getPassword())){
-                    Toast.makeText(HomeActivity.this, "密码不能为空", 0).show();
+                    Toast.makeText(HomeActivity.this, "密码不能为空",  Toast.LENGTH_LONG).show();
                 }else if (password.equals(MD5Utils.encode(mInPswdDialog.getPassword()))){
                     mInPswdDialog.dismiss();
                     startActivity(LostFindActivity.class);
-                    Toast.makeText(HomeActivity.this, "可以进入手机防盗模块", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(HomeActivity.this, "可以进入手机防盗模块", Toast.LENGTH_LONG).show();
                 }else{
                     mInPswdDialog.dismiss();
-                    Toast.makeText(HomeActivity.this, "密码有误，请重新输入!", 0).show();
+                    Toast.makeText(HomeActivity.this, "密码有误，请重新输入!",  Toast.LENGTH_LONG).show();
                 }
             }
 

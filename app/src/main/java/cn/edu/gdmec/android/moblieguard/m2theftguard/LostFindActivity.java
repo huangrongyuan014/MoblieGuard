@@ -19,4 +19,5 @@ public class LostFindActivity extends AppCompatActivity {
         startActivity(intent);
         finish();
     }
+
 }

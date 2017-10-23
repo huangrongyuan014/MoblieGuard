@@ -44,10 +44,10 @@ public class VersionUpdateUtils {
            public void handleMessage(Message msg){
                switch (msg.what){
                    case MESSAGE_IO_ERROR:
-                       Toast.makeText(context, "IO错误", Toast.LENGTH_SHORT).show();
+                       Toast.makeText(context, "IO错误", Toast.LENGTH_LONG).show();
                        break;
                    case MESSAGE_JSON_ERROR:
-                       Toast.makeText(context, "JSON解析错误", Toast.LENGTH_SHORT).show();
+                       Toast.makeText(context, "JSON解析错误", Toast.LENGTH_LONG).show();
                        break;
                    case MESSAGE_SHOW_DIALOG:
                        showUpdateDialog(versionEntity);
